@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+.fontTitle {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.fontSmText {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.body {
+    background: url('../Images/FundoSMATSV.jpg') no-repeat center;
+    background-size: cover;
+    background-position-y: -300px;
+    min-height: 100vh;
+    padding-block: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.content {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    margin: 20px;
+    align-self: flex-start;
+}
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.titulo {
+    font-size: 36px;
+    font-family: 'Licorice', cursive;
+}
+
+.info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.info span {
+    background-color: #4caf50;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.descricao {
+    margin: 20px 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    background-color: #ffa500;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.similar-titles {
+    margin-top: 20px;
+    width: calc(100vw - 40px);
+}
+
+.similar-titles h2 {
+    margin-bottom: 10px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.titles {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-block: 10px;
+}
+
+.titles::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+  }
+  
+.titles::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+.titles::-webkit-scrollbar-thumb {
+    background-color: #707070;
+    border-radius: 20px;
+    border: 3px solid rgb(69, 69, 69);
+  }
+
+.title {
+    flex: 0 0 auto;
+    width: 120px;
+    height: 180px;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+/* Responsiveness for the movie details */
+@media (max-width: 1200px) {
+    .content {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        max-width: 90%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 28px;
+    }
+
+    .info {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .content {
+        padding: 15px;
+        margin: 10px;
+    }
+}

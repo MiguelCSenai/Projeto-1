@@ -1,12 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Menu from './Components/MenuComponent'
+import Filmes from './Pages/Filmes';
 import reportWebVitals from './reportWebVitals';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/08122008",
+    element: <div>Hello world!</div>,
+  },
+  {
+    path: "/Filmes",
+    element: <Filmes/>,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      Hello World!!
+    <Menu />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
