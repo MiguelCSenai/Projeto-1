@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Menu from './Components/MenuComponent'
 import Filmes from './Pages/Filmes';
+import Login from './Components/LoginComponent'
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -12,11 +13,19 @@ import {
 const router = createBrowserRouter([
   {
     path: "/08122008",
-    element: <div>Hello world!</div>,
+    element: <div><br></br><br></br><br></br>Hello world!</div>,
   },
   {
-    path: "/Filmes",
+    path: "/filmes",
     element: <Filmes/>,
+  },
+  {
+    path: "/livros",
+    element: <Filmes/>,
+  },
+  {
+    path: "/login",
+    element: <Login/>,
   },
 ]);
 

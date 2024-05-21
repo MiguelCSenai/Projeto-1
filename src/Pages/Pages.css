@@ -19,7 +19,7 @@
     background-size: cover;
     background-position-y: -300px;
     min-height: 100vh;
-    padding-block: 100px;
+    padding-block: 100px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,8 +27,9 @@
 }
 
 .content {
-    padding: 20px;
+    padding: 50px;
     background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
     border-radius: 10px;
     max-width: 400px;
     width: 100%;
@@ -44,7 +45,6 @@
 
 .titulo {
     font-size: 36px;
-    font-family: 'Licorice', cursive;
 }
 
 .info {
@@ -70,13 +70,75 @@
     gap: 10px;
 }
 
+@keyframes hoverFade {
+
+    from{
+        
+        background-color: #238ed6;
+        color: black;
+        scale: 1;
+
+    }
+
+    to{
+
+        background-color: #236c9c;
+        color: aliceblue;
+        scale: 1.1;
+
+    }
+
+    
+}
+
+@keyframes hoverFadeOut {
+
+    from{
+        
+        background-color: #236c9c;
+        color: aliceblue;
+        scale: 1.1;
+
+    }
+
+    to{
+
+        background-color: #238ed6;
+        color: black;
+        scale: 1;
+
+    }
+
+    
+}
+
 .buttons button {
-    background-color: #ffa500;
+    background-color: #238ed6;
     color: black;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
     font-family: 'Roboto Condensed', sans-serif;
+}
+
+.buttons button:hover {
+    
+    background-color: #236c9c;
+    color: aliceblue;
+    animation-name: hoverFade;
+    animation-duration: .4s;
+    scale: 1.1;
+    
+}
+
+.buttons button:not(:hover) {
+    
+    background-color: #238ed6;
+    color: black;
+    animation-name: hoverFadeOut;
+    animation-duration: .4s;
+    scale: 1;
+    
 }
 
 .similar-titles {
@@ -86,12 +148,12 @@
 
 .similar-titles h2 {
     margin-bottom: 10px;
-    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
 }
 
 .titles {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     overflow-x: auto;
     padding-block: 10px;
 }
@@ -113,8 +175,8 @@
 
 .title {
     flex: 0 0 auto;
-    width: 120px;
-    height: 180px;
+    width: 160px;
+    height: 220px;
     background-color: gray;
     border-radius: 10px;
 }

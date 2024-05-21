@@ -6,10 +6,9 @@ function Menu() {
     <div className='header'>
       <div className='logo'>Movie Cave</div>
       <nav>
-        <a href=''>Home</a>
-        <a href='/'>Filmes</a>
-        <a href='#'>Livros</a>
-        <a href='#'>&#x1F50D;</a>
+        <a href='/'>Home</a>
+        <a href='/filmes'>Filmes</a>
+        <a href='/livros'>Livros</a>
       </nav>
       <div className='auth-buttons'>
         <button className='login'>Login</button>

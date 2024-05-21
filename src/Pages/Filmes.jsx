@@ -6,7 +6,7 @@ function Filmes() {
     <div className='body'>
       <div className='content'>
         <div className='movie-details'>
-          <h1 className='fontTitle titulo'>Homem Aranha Através do Aranhaverso</h1>
+          <h1 className='titulo fontTitle'>Homem Aranha Através do Aranhaverso</h1>
           <div className='info'>
             <span className='classificacao'>L</span>
             <span className='rating'>9.1 (15,563)</span>
@@ -26,9 +26,6 @@ function Filmes() {
       <div className='similar-titles'>
         <h2 className='subtitulo'>Títulos Semelhantes</h2>
         <div className='titles'>
-          <div className='title'></div>
-          <div className='title'></div>
-          <div className='title'></div>
           <div className='title'></div>
           <div className='title'></div>
           <div className='title'></div>
