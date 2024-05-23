@@ -93,6 +93,24 @@
     }
   }
 
+  .bodyLogin {
+    background:
+    linear-gradient(50deg, rgba(146, 146, 146, 0.02) 0%, rgba(146, 146, 146, 0.02) 25%,rgba(82, 82, 82, 0.02) 25%, rgba(82, 82, 82, 0.02) 50%,rgba(217, 217, 217, 0.02) 50%, rgba(217, 217, 217, 0.02) 75%,rgba(41, 41, 41, 0.02) 75%, rgba(41, 41, 41, 0.02) 100%),
+    linear-gradient(252deg, rgba(126, 126, 126, 0.01) 0%, rgba(126, 126, 126, 0.01) 25%,rgba(117, 117, 117, 0.01) 25%, rgba(117, 117, 117, 0.01) 50%,rgba(219, 219, 219, 0.01) 50%, rgba(219, 219, 219, 0.01) 75%,rgba(41, 41, 41, 0.01) 75%, rgba(41, 41, 41, 0.01) 100%),
+    linear-gradient(272deg, rgba(166, 166, 166, 0.01) 0%, rgba(166, 166, 166, 0.01) 20%,rgba(187, 187, 187, 0.01) 20%, rgba(187, 187, 187, 0.01) 40%,rgba(238, 238, 238, 0.01) 40%, rgba(238, 238, 238, 0.01) 60%,rgba(204, 204, 204, 0.01) 60%, rgba(204, 204, 204, 0.01) 80%,rgba(5, 5, 5, 0.01) 80%, rgba(5, 5, 5, 0.01) 100%),
+    linear-gradient(86deg, rgba(143, 143, 143, 0.02) 0%, rgba(143, 143, 143, 0.02) 12.5%,rgba(36, 36, 36, 0.02) 12.5%, rgba(36, 36, 36, 0.02) 25%,rgba(23, 23, 23, 0.02) 25%, rgba(23, 23, 23, 0.02) 37.5%,rgba(223, 223, 223, 0.02) 37.5%, rgba(223, 223, 223, 0.02) 50%,rgba(101, 101, 101, 0.02) 50%, rgba(101, 101, 101, 0.02) 62.5%,rgba(94, 94, 94, 0.02) 62.5%, rgba(94, 94, 94, 0.02) 75%,rgba(148, 148, 148, 0.02) 75%, rgba(148, 148, 148, 0.02) 87.5%,rgba(107, 107, 107, 0.02) 87.5%, rgba(107, 107, 107, 0.02) 100%),
+    linear-gradient(25deg, rgba(2, 2, 2, 0.02) 0%, rgba(2, 2, 2, 0.02) 16.667%,rgba(51, 51, 51, 0.02) 16.667%, rgba(51, 51, 51, 0.02) 33.334%,rgba(26, 26, 26, 0.02) 33.334%, rgba(26, 26, 26, 0.02) 50.001000000000005%,rgba(238, 238, 238, 0.02) 50.001%, rgba(238, 238, 238, 0.02) 66.668%,rgba(128, 128, 128, 0.02) 66.668%, rgba(128, 128, 128, 0.02) 83.33500000000001%,rgba(21, 21, 21, 0.02) 83.335%, rgba(21, 21, 21, 0.02) 100.002%),
+    linear-gradient(325deg, rgba(95, 95, 95, 0.03) 0%, rgba(95, 95, 95, 0.03) 14.286%,rgba(68, 68, 68, 0.03) 14.286%, rgba(68, 68, 68, 0.03) 28.572%,rgba(194, 194, 194, 0.03) 28.572%, rgba(194, 194, 194, 0.03) 42.858%,rgba(51, 51, 51, 0.03) 42.858%, rgba(51, 51, 51, 0.03) 57.144%,rgba(110, 110, 110, 0.03) 57.144%, rgba(110, 110, 110, 0.03) 71.42999999999999%,rgba(64, 64, 64, 0.03) 71.43%, rgba(64, 64, 64, 0.03) 85.71600000000001%,rgba(31, 31, 31, 0.03) 85.716%, rgba(31, 31, 31, 0.03) 100.002%),
+    linear-gradient(90deg, hsl(80,0%,14%),hsl(80,0%,14%));
+    background-position-y: -300px;
+    min-height: 100vh;
+    padding-block: 100px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
   .container{
 
     width: 100%;
@@ -100,15 +118,15 @@
     height: 100%;
     min-height: 600px;
     max-height: 800px;
-    background-color: #333333ea;
+    background-color: #8d8d8d34;
     border: #b3b3b3 solid 3px;
     backdrop-filter: blur(6px);
-    padding: 50px 80px;
+    padding: 90px 120px;
     border-radius: 25px 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 70px;
+    gap: 100px;
 
   }
 
@@ -131,6 +149,7 @@
     background: #b3b3b3;
     padding-inline: 20px;
     border-radius: 10px 5px;
+    font-size: 90%;
 
   }
   form input:focus{
@@ -154,9 +173,21 @@
   
   .subm{
 
-    background-color: #238ed6;
+    background-color: #3575a0;
     color: aliceblue;
     border-radius: 8px;
+    height: 50px;
+    font-size: 130%;
+
+  }
+
+  .subm:focus{
+
+    background-color: #3575a0;
+    color: aliceblue;
+    border-radius: 8px;
+    height: 50px;
+    font-size: 130%;
 
   }
 
@@ -165,13 +196,29 @@
     width: 170px;
     height: 130px;
     scale: 1.3;
-    background: url('../Images/Logo.png');
+    background: url('../Images/logo.png');
     background-size: cover;
     margin-top: -4vh;
 
   }
-  b{
 
-    font-size: 3.6vh;
+  .sucesso{
+
+    font-weight: bold;
+    font-size: 3.4vh;
+    background: #51a5dd6b;
+    border: aliceblue solid 2px;
+    padding: 45px;
+    min-width: 800px;
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
+    width: 40%;
+    margin-bottom: 30px;
+
+  }
+
+  .erro{
+
+    color: rgb(255, 110, 110);
 
   }

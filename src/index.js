@@ -4,6 +4,9 @@ import './index.css';
 import Menu from './Components/MenuComponent'
 import Filmes from './Pages/Filmes';
 import Login from './Components/LoginComponent'
+import Signin from './Components/SigninComponent';
+import Livros from './Pages/Livros';
+import Home from './Pages/Home';
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -21,11 +24,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/livros",
-    element: <Filmes/>,
+    element: <Livros/>,
   },
   {
     path: "/login",
     element: <Login/>,
+  },
+  {
+    path: "/signin",
+    element: <Signin/>,
   },
 ]);
 

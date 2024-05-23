@@ -11,8 +11,8 @@ function Menu() {
         <a href='/livros'>Livros</a>
       </nav>
       <div className='auth-buttons'>
-        <button className='login'>Login</button>
-        <button>Sign-in</button>
+        <a href='/login'><button className='login'>Login</button></a>
+        <a href='/signin'><button>Sign-in</button></a>
       </div>
     </div>
   );
