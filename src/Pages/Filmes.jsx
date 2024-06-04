@@ -1,43 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import './Pages.css'; // Certifique-se de que o caminho está correto para o arquivo CSS
+import './Pages.css';
 import axios from 'axios';
 
 function Filmes() {
   
-  const [filme1, setFilme1] = useState({
-    titulo: "",
-    sinopse: "",
-    capa: "",
-    trailer: "",
-    fav: "",
-    categoria: "",
-    imagem1: "",
-    imagem2: "",
-  });
-
+  const [exibir, setExibir] = useState(0);
   const [filmes, setFilmes] = useState([]);
-
-
-
-
-
 
   useEffect(() => {
     function requests(){
-    axios.get('http://143.198.156.185/api/home')
+    axios.get('http://143.198.156.185/api/filmes')
       .then(function (response) {
-        const data = response.data[0];
-        setFilme1({
-          titulo: data.titulo,
-          sinopse: data.sinopse,
-          capa: data.url_thumbnail,
-          trailer: data.url_video,
-          fav: data.qtd_favoritos,
-          categoria: data.categoria,
-          imagem1: data.imagens[0].url,
-          imagem2: data.imagens[1].url,
-        });
-        setFilmes(response.data)
+        setFilmes(response.data);
+        console.log();
+
       })
       .catch(function (error) {
         console.log(error);
@@ -45,58 +21,55 @@ function Filmes() {
 
 
   }, []);
- 
 
+  const obterInfoDoFilme = (id) => {
+    const filme = filmes.find(filme => filme.id === id);
+    return filme ? { 
+      titulo: filme.titulo,
+      sinopse: filme.sinopse,
+      qtd_favoritos: filme.qtd_favoritos,
+      imagens: filme.imagens.map(imagem => imagem.url),
+      categoria: filme.categoria,
+      capa: filme.url_thumbnail,
+    } : {};
+  }
+
+  const filmeInfo = obterInfoDoFilme(exibir);
 
   return (
     <div className='body'>
-      <div className='content'>
-        <div className='movie-details'>
-          <h1 className='titulo fontTitle'>{filme1.titulo}</h1>
-          <div className='info'>
-            <span className='rating'>❤{filme1.fav}</span>
-            <span className='genero'>{filme1.categoria}</span>
-          </div>
-          <div className='descricao'>
-            {filme1.sinopse}
-          </div>
-          <div className='buttons'>
-            <button className='trailer'>Assistir trailer</button>
-            <button className='filme'>Assistir filme</button>
+      <div className="containerContent">
+
+        <div className='content'>
+          <div className='movie-details'>
+            <div className="mainInfo"><h1 className='titulo fontTitle'>{filmeInfo.titulo}</h1><img className='Capa' src={filmeInfo.capa} alt=""/></div>
+            <div className='info'>
+              <span className='rating'>❤{filmeInfo.qtd_favoritos}</span>
+              <span className='genero'>{filmeInfo.categoria}</span>
+            </div>
+            <div className='descricao'>
+            {filmeInfo.sinopse}
+            </div>
+            <div className='buttons'>
+              <button className='trailer'>Mais Informações</button>
+            </div>
           </div>
         </div>
+
+
       </div>
       <div className='similar-titles'>
-        <h2 className='subtitulo'>Títulos Semelhantes</h2>
+        <h2 className='subtitulo'>Filmes</h2>
         <div className='titles'>
-          <div className='title'></div>
-          <div className='title' ></div>
-          <div className='title'></div>
-          <div className='title'></div>
-          <div className='title'></div>
-          <div className='title'></div>
-          <div className='title'></div>
-          <div className='title'></div>
-          <div className='title'></div>
-          <div className='title'></div>
-          <div className='title'></div>
-          <div className='title'></div>
+          {filmes.map((filme, index) => (
+            <div className='title' key={index} onClick={() => setExibir(filme.id)}>
+              <img src={filme.url_thumbnail} alt={filme.titulo} />
+              
+            </div>
+          ))}
         </div>
       </div>
-      <div className='titles'>
 
-
-  {filmes.map((item) => {
-    if (item.id === 1) {
-      return <div className='title'><img src={item.url_thumbnail} /></div>;
-    }
-  })}
-
-
-
-
-
-</div>
 
     </div>
   );

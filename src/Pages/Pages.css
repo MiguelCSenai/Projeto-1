@@ -47,6 +47,7 @@
     border-radius: 10px;
     max-width: 400px;
     width: 100%;
+    min-height: 350px;
     margin: 20px;
     align-self: flex-start;
 }
@@ -73,6 +74,14 @@
     padding: 2px 5px;
     border-radius: 3px;
 }
+.containerContent{
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
 
 .descricao {
     margin: 20px 0;
@@ -82,6 +91,26 @@
 .buttons {
     display: flex;
     gap: 10px;
+}
+.Capa{
+
+    height: 150px;
+    width: 112px;
+    position: absolute;
+    margin-left: 60%;
+    top: 20px;
+    border-radius: 5px;
+    border: #f1f1f1 solid 3px;
+
+}
+
+.mainInfo{
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
 
 @keyframes hoverFade {
@@ -157,6 +186,7 @@
 
 .similar-titles {
     margin-top: 20px;
+    margin-left: 20px;
     width: calc(100vw - 40px);
 }
 
@@ -167,9 +197,10 @@
 
 .titles {
     display: flex;
-    gap: 15px;
+    gap: 25px;
     overflow-x: auto;
     padding-block: 10px;
+    margin-left: 30px;
 }
 
 .titles::-webkit-scrollbar {
